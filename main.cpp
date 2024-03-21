@@ -23,3 +23,11 @@ bool GetInt(string::const_iterator& s_it,
 bool GetPath(const string& line, Paths64& paths)
 {
 //yes
+ Path64 p;
+  int64_t x = 0, y = 0;
+  string::const_iterator s_it = line.cbegin(), s_end = line.cend();
+  while (GetInt(s_it, s_end, x) && GetInt(s_it, s_end, y))
+    p.push_back(Point64(x, y));
+  if (p.empty()) return false;
+  paths.push_back(p);
+  return true;
