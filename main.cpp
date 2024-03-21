@@ -22,3 +22,4 @@ bool GetInt(string::const_iterator& s_it,
 
 bool GetPath(const string& line, Paths64& paths)
 {
+//yes
